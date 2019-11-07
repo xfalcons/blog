@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Xfalcons 技術覺旅
+title: Xfalcons 〒覺旅
 subtitle: ''
 description: ''
 keywords:
@@ -90,7 +90,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: cake
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
