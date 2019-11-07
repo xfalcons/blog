@@ -1,0 +1,3 @@
+[submodule "themes/cake"]
+	path = themes/cake
+	url = git@github.com:xfalcons/hexo-theme-cake.git
