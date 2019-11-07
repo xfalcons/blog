@@ -1,3 +1,6 @@
 [submodule "themes/cake"]
 	path = themes/cake
 	url = git@github.com:xfalcons/hexo-theme-cake.git
+[submodule "themes/next"]
+	path = themes/next
+	url = git@github.com:xfalcons/hexo-theme-next.git
