@@ -12,6 +12,8 @@ OpenResty is a combination of Nginx and Lua. I won't explain that here, you coul
 
 {% asset_img openresty-nginx-lua.png This is an image %}
 
+<!--more-->
+
 ### How it works
 
 {% plantuml %}
@@ -29,8 +31,6 @@ Rd-> Dest: Redirect user to url
 
 *click url: https://rd.example.com?show=true&t=32&tag=car&url=https%3A%2F%2Ftoday.line.me*
 *query parameters should be url-encoded.*
-
-<!--more-->
 
 ### Environment
 
@@ -174,7 +174,7 @@ http {
                 local bp = producer:new(broker_list, { producer_type = "async" })
 
                 -- The second parameter of send method is to control kafka routing.
-                -- When it's nill, it will write message to same partition
+                -- When it is nill, it will write message to same partition
                 -- With designated key，it will write message to hash of key of partition
                 local ok, err = bp:send(topic, nil, params_message)
 
@@ -205,4 +205,12 @@ Check you logs/error.log file, there should not have any `kafka send err:`
 ```
 2019/11/06 04:59:44 [error] 6#6: *1 [lua] content_by_lua(nginx.conf:119):25: url: nil, client: 172.17.0.1, server: localhost, request: "GET /rd?a=b&open=false&run=success&yeild=ok&url=http://tw.news.yahoo.com HTTP/1.1", host: "127.0.0.1:8089"
 2019/11/06 04:59:44 [error] 6#6: *1 [lua] content_by_lua(nginx.conf:119):56: Message in json: {"run":"success","yeild":"ok","url":"http:\/\/tw.news.yahoo.com","a":"b","open":"false"}, client: 172.17.0.1, server: localhost, request: "GET /rd?a=b&open=false&run=success&yeild=ok&url=http://tw.news.yahoo.com HTTP/1.1", host: "127.0.0.1:8089"
+```
+
+### Verify kafka message queue
+
+``` bash
+kafka-console-consumer --broker-list 192.168.0.16:9092 --topic redirect-server --from-beginning
+
+kafka-console-producer --broker-list 192.168.0.16:9092 --topic redirect-server
 ```
