@@ -8,7 +8,7 @@ tags: k8s traefik tls secret
 
 There are cases you need to share wildcard SSL certificats between different namespaces through k8s ingress controller(traefik 2.x). From security perspective, you should not do this. But, but, but..., you still need it when it comes to reality.
 
-{% asset_img ingress-multi-ssl.svg This is an image %}
+![](/2019/11/20/Share-TLS-Certificates-Between-Namespaces-In-Kubernetes/ingress-multi-ssl.svg)
 
 <!--more-->
 

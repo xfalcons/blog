@@ -10,7 +10,7 @@ A redirect server for logging is used to trace various urls user clicked. The re
 
 OpenResty is a combination of Nginx and Lua. I won't explain that here, you could google it to know more.
 
-{% asset_img openresty-nginx-lua.png This is an image %}
+![](/2019/11/08/OpenResty-as-redirect-server-for-logging-sent-to-Kafka/openresty-nginx-lua.png)
 
 <!--more-->
 
